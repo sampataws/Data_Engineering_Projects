@@ -102,8 +102,8 @@ def process_data(cur, conn, filepath, func):
         print('{}/{} files processed.'.format(i, num_files))
 
 
-def create_conn(hostname="127.0.0.1",databasename="postgres",username="postgres",password="password",port="5432"):
-    conn = psycopg2.connect(host=hostname, dbname=databasename,user=username, password=password,port=port)
+def create_conn(hostname="127.0.0.1",databasename="studentdb",username="student",password="student",port="5432"):
+    conn = psycopg2.connect(host=hostname, dbname=databasename,user=username, password=password)
     return conn
 
 

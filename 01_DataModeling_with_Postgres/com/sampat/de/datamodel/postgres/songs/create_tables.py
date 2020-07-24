@@ -2,9 +2,9 @@ import psycopg2
 from com.sampat.de.datamodel.postgres.songs.sql_queries import create_table_queries, drop_table_queries
 
 
-def create_database(hostname="127.0.0.1",databasename="postgres",username="postgres",password="password",port="5432"):
+def create_database(hostname="127.0.0.1",databasename="studentdb",username="student",password="student",port="5432"):
     '''Connect to Default database'''
-    conn = psycopg2.connect(database=databasename, user=username, password=password, host=hostname, port=port)
+    conn = psycopg2.connect(database=databasename, user=username, password=password, host=hostname)
     conn.set_session(autocommit=True)
     cur = conn.cursor()
 
