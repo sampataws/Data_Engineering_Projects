@@ -200,7 +200,7 @@ logger.info("Creating table with name -> user_session_details ")
 query = """ 
             CREATE TABLE IF NOT EXISTS user_session_details
             (user_id INT, session_id INT, item_in_session INT,artist_name TEXT, song_title TEXT, user_first_name TEXT,user_last_name TEXT,
-            PRIMARY KEY((userId, sessionId), itemInSession)) 
+            PRIMARY KEY((user_id, session_id), item_in_session)) 
         """
 logger.info("Executing query for user_songs_details table -> {}".format(query))
 
@@ -217,7 +217,7 @@ with open(file, encoding = 'utf8') as f:
         insert_query = "INSERT INTO user_session_details(user_id, session_id, item_in_session, artist_name,song_title, user_first_name, user_last_name)"
         insert_query = insert_query + "VALUES (%s, %s, %s, %s, %s, %s, %s)"
         ## Assign which column element should be assigned for each column in the INSERT statement.
-        session.execute(query, (int(line[10]), int(line[8]), int(line[3]), line[0], line[9], line[1], line[4]))
+        session.execute(insert_query, (int(line[10]), int(line[8]), int(line[3]), line[0], line[9], line[1], line[4]))
 
 select_query_for_case_2 = """ SELECT artist_name, song_title, user_first_name, user_last_name FROM user_session_details
                               WHERE user_id = %s
