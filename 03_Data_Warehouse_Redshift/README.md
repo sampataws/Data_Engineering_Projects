@@ -22,6 +22,9 @@ This source of data will be useful in helping Sparkify reach some of its analyti
 
 
 ## Files
+* ```MODULE_NAME``` = 03_Data_Warehouse_Redshift
+* ```PACKAGE_NAME``` = com.sampat.de.dw.redshift
+
 * create_tables.py is the python script that drops all tables and create all tables (including staging tables)
 
 * sql_queries.py is the python file containing all SQL queries. It is called by create_tables.py and etl.py
@@ -33,6 +36,9 @@ This source of data will be useful in helping Sparkify reach some of its analyti
 * dwh.cfg contains configurations for Redshift database. Please edit according to the Redshift cluster and database created on AWS
 
 ## Running the ETL Pipeline
+* ```MODULE_NAME``` = 03_Data_Warehouse_Redshift
+* ```PACKAGE_NAME``` = com.sampat.de.dw.redshift
+
 * First, run ```create_tables.py``` to create the data tables using the schema design specified. If tables were created previously, they will be dropped and recreated.
 
 * Next, run ```etl.py``` to populate the data tables created.
