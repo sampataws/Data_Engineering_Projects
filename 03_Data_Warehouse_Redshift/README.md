@@ -1,4 +1,4 @@
-##Description
+## Description
 This repo provides the ETL pipeline, to populate the sparkifydb database in AWS Redshift.
 
 The purpose of this database is to enable Sparkify to answer business questions it may have of its users, the types of songs they listen to and the artists of those songs using the data that it has in logs and files. The database provides a consistent and reliable source to store this data.
@@ -11,7 +11,7 @@ This source of data will be useful in helping Sparkify reach some of its analyti
 
 ![images](images/02_db_schema_design.png)
 
-##Data Pipeline design
+## Data Pipeline design
 * For the ETL pipeline, Python is used as it contains libraries such as pandas, that simplifies data manipulation. It also allows connection to Postgres Database.
 
 * There are 2 types of data involved, song and log data. For song data, it contains information about songs and artists, which we extract from and load into users and artists dimension table
@@ -21,7 +21,7 @@ This source of data will be useful in helping Sparkify reach some of its analyti
 * Next, we perform ETL using SQL, from the staging tables to our fact and dimension tables. Below shows the architectural design of this pipeline:
 
 
-##Files
+## Files
 * create_tables.py is the python script that drops all tables and create all tables (including staging tables)
 
 * sql_queries.py is the python file containing all SQL queries. It is called by create_tables.py and etl.py
@@ -32,7 +32,7 @@ This source of data will be useful in helping Sparkify reach some of its analyti
 
 * dwh.cfg contains configurations for Redshift database. Please edit according to the Redshift cluster and database created on AWS
 
-##Running the ETL Pipeline
+## Running the ETL Pipeline
 * First, run ```create_tables.py``` to create the data tables using the schema design specified. If tables were created previously, they will be dropped and recreated.
 
 * Next, run ```etl.py``` to populate the data tables created.
