@@ -28,9 +28,9 @@ This source of data will be useful in helping Sparkify reach some of its analyti
 
 * etl.py is the python script that loads data into staging tables, then load data into fact and dimension tables from staging tables
 
-redshift_cluster_iac.py sets up the redshift cluster and creates an IAM role for redshift to access other AWS services
+* redshift_cluster_iac.py sets up the redshift cluster and creates an IAM role for redshift to access other AWS services
 
-dwh.cfg contains configurations for Redshift database. Please edit according to the Redshift cluster and database created on AWS
+* dwh.cfg contains configurations for Redshift database. Please edit according to the Redshift cluster and database created on AWS
 
 ##Running the ETL Pipeline
 * First, run ```create_tables.py``` to create the data tables using the schema design specified. If tables were created previously, they will be dropped and recreated.
