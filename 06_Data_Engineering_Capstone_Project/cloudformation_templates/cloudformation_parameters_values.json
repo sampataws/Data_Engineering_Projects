@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "KeyName",
+        "ParameterValue": "dataengineering-capstone-cloudformation"
+    },
+    {
+        "ParameterKey": "S3BucketName",
+        "ParameterValue": "airflowpassword"
+    },
+    {
+        "ParameterKey": "ProjectName",
+        "ParameterValue": "dataengineering-capstone-project-bucket"
+    }
+]
