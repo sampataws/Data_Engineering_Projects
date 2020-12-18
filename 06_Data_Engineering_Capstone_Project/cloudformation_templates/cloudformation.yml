@@ -129,7 +129,7 @@ Resources:
       - DBInstance
       - AirflowEC2SecurityGroup
   DBInstance:
-    Type: AWS::RDS::DBInstance
+    Type: AWS::AirflowEMRMasterSG::DBInstance
     DeletionPolicy: Delete
     Properties:
       DBName: airflowdb
@@ -176,7 +176,7 @@ Resources:
   AirflowEMRSlaveEC2SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: AirflowEMRSlaveSG
+      GroupName: AirflowEMRWorkerSG
       GroupDescription: Airflow EMR Slave SG
   DBSecurityGroup:
     Type: AWS::RDS::DBSecurityGroup
